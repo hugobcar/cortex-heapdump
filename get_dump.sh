@@ -8,7 +8,7 @@ while true; do
 	kubectl -n cortex get pods | grep -w 'cortex-ingester-1' | grep -v Running
 
 	if [ $? -ne 1 ]; then
-		echo "Ingester 1 is not running. Existing..."
+		echo "Ingester 1 is not running. Exiting..."
 
 		exit 0
 	fi
